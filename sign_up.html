@@ -1,0 +1,200 @@
+<html>
+<head><title>Sign Up</title></head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,600);
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'open sans', helvetica, arial, sans;
+  
+}
+.log-form {
+  width: 40%;
+  min-width: 320px;
+  max-width: 475px;
+  background: #fff;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 40em) {
+  .log-form {
+    width: 95%;
+    position: relative;
+    margin: 2.5% auto 0 auto;
+    left: 0%;
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
+  }
+}
+.log-form form {
+  display: block;
+  width: 100%;
+  padding: 2em;
+}
+.log-form h2 {
+  color: #fff;
+  font-family: 'open sans condensed';
+  font-size: 1.35em;
+  display: block;
+  background: #2a2a2a;
+  width: 100%;
+  text-transform: uppercase;
+  padding: .75em 1em .75em 1.5em;
+  box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.05);
+  border: 1px solid #1d1d1d;
+  margin: 0;
+  font-weight: 200;
+}
+.log-form input {
+  display: block;
+  margin: auto auto;
+  width: 100%;
+  margin-bottom: 2em;
+  padding: .5em 0;
+  border: none;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 1.25em;
+  color:  #000000;
+}
+.log-form input:focus {
+  outline: none;
+}
+.log-form .btn {
+  display: inline-block;
+  background: #800080;
+  border: 1px solid #1ba0a9;
+  padding: .5em 2em;
+  color: white;
+  margin-right: .5em;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+.log-form .btn:hover {
+  background: #800080;
+}
+.log-form .btn:active {
+  background: #800080;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.log-form .btn:focus {
+  outline: none;
+}
+.log-form .forgot {
+  color: #800080;
+  line-height: .5em;
+  position: relative;
+  top: 2.5em;
+  text-decoration: none;
+  font-size: .75em;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+.log-form .forgot:hover {
+  color: #800080;
+}
+
+
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+</style>
+
+
+<body>
+
+<div id="top">
+<h2><a href="index.html">homepage</a>
+</div>
+<div id="banner">
+<h1><font color="purple"> Delhi Transport Corporation</font></h1>
+</div><br>
+
+<p>    </p>
+<br>
+<div class="log-form">
+  <h2>Sign Up</h2>
+  
+  <form action="https://localhost/insertS.php" method="post">
+        name:<input type="text" name="username">
+	          
+	email:<input type="text" name="email">
+               
+              <input type="submit" value="insert" name="submit">
+
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2><font color="white">Thank You</font></h2>
+		<a class="close" href="index.html">&times;</a>
+		<div class="content">
+			You have succesfully Signed Up.
+		</div>
+	</div>
+</div>
+
+   
+  </form>
+</div><!--end log form -->
+</body>
+</html>
